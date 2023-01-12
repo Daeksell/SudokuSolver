@@ -5,9 +5,9 @@ string puzzle = "002000041000082070000040009200079300010000080006810004100090000
 var solver = new Solver();
 var grid = ConvertToGrid(puzzle);
 
-var board = solver.Solve(grid);
+solver.Solve(grid);
 
-Console.WriteLine(board);
+Console.WriteLine(solver.Board);
 
 
 

@@ -52,14 +52,18 @@ namespace SudokuSolver
                 for (int y = 0; y < 9; y++)
                 {
                     sb.AppendJoin(' ', this[x,y]);
-                    if (y == (y / 3) + 2 && y != 8)
+                    if (y == 2 || y == 5 )
                     {
                         sb.Append('|');
                     }
+                    if (y == 8)
+                    {
+                        sb.Append('\n');
+                    }
                 }
-                if (x == (x / 3) + 2 && x != 8)
+                if (x == 2 || x == 5)
                 {
-                    sb.AppendLine("------+------+------");
+                    sb.AppendLine("---+---+---");
                 }
             }
             return sb.ToString();
